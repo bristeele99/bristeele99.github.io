@@ -5,9 +5,10 @@ class Skater {
         this.letters = "";
     }
     log(message) {
-      
-      logContainer.innerHTML += `<p>${message}</p>`;
-      logContainer.scrollTop = logContainer.scrollHeight;
+      const newMessage = document.createElement('p');
+      newMessage.textContent = message;
+
+      logContainer.appendChild(newMessage, logContainer.firstChild);
 
     }
 
@@ -58,12 +59,28 @@ restartButton.addEventListener('click', () => {
 
 //toggle for choosing player at the start
 button1.addEventListener('click', () => { 
-  toggleButtons ('player1', 'player2', 'trick-Button', 'Trick-List')
+  toggleButtons ('player1', 'player2', 'trick-Button',
+  'Trick-List', 'opponentStatus','playerStatus')
   gameStarted = true
 });
 button2.addEventListener('click', () => {
   toggleButtons ('player1', 'player2', 'restart')
   gameStarted = true
+});
+
+button3.addEventListener('click', function (event) {
+  const newTrickList = document.querySelector('#Trick-List');
+  // Choose a random group of tricks
+  const randomGroup = tricks[Math.floor(Math.random() * tricks.length)];
+
+  // Assign displayed tricks to keysToCheck
+  keysToCheck = randomGroup.map(trick => trick.split('+').pop().trim().toLowerCase());
+
+  // Update the Trick List
+  newTrickList.innerHTML = randomGroup.map(trick => `"${trick}"<br>`).join('');
+
+  // Initialize event listeners
+  initializeEventListeners(keysToCheck);
 });
 
 /////////////////////////////////////////////////
@@ -135,22 +152,6 @@ function initializeEventListeners(keys) {
         checkSkillAndScore();
   });
 }
-
-button3.addEventListener('click', function (event) {
-  const newTrickList = document.querySelector('#Trick-List');
-  // Choose a random group of tricks
-  const randomGroup = tricks[Math.floor(Math.random() * tricks.length)];
-
-  // Assign displayed tricks to keysToCheck
-  keysToCheck = randomGroup.map(trick => trick.split('+').pop().trim().toLowerCase());
-
-  // Update the Trick List
-  newTrickList.innerHTML = randomGroup.map(trick => `"${trick}"<br>`).join('');
-
-  // Initialize event listeners
-  initializeEventListeners(keysToCheck);
-});
-
 
 //////////////////////////////////////////////////
 ////////////////Score Check///////////////////////

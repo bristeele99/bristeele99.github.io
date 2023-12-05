@@ -12,7 +12,19 @@
             Skater Showdown
         </h1>
     </header>
-    
+    <div id="rulesContainer">
+        <div id="rules">
+        This game is a spin off of the classic skateboarding game "Skate". 
+        The rules are as follows:
+        The players try to complete tricks without making mistakes. 
+        The first to complete a trick successfully has "set" the trick. The opponent now has 
+        to complete the same trick without making a mistake otherwise he gets a letter (example:"S").
+        The round starts over, and whoever gathers all the letters "SKATE" first LOSES!<br> 
+        <br>
+        1. Choose character.<br>
+        2. Press and hold the trick letters for 1 second to execute trick. Good Luck!
+        </div>
+    </div>
     <div id="buttonsContainer">
         <button type="button" id="start">START</button>
         <button type="button" id="trick-Button" class="hidden">New Trick</button>
@@ -21,13 +33,13 @@
         <div id="Trick-List" class="hidden"></div>
         <button type="button" id="restart" class="hidden">Restart</button>
     </div>
-    <div class="belowButtons">
-        <p id= "playerStatus"> </p>
+    <div class="belowButtons" id="floatRight">
+        <p id= "opponentStatus" class="hidden">Score:</p>
     </div>
-    <div class="belowButtons">
-        <p id= "opponentStatus"> </p>
+    <div class="belowButtons" id="floatLeft" >
+        <p id= "playerStatus" class="hidden">Score: </p>
     </div>
-    <div class="belowButtons">
+    <div id="centerLog">
         <div id="logContainer"></div>
     </div>
 

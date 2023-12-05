@@ -4,10 +4,21 @@ header {
     color: orangered;
     font-family: monospace;
     font-size: 25px;
-    background-color: rgba(0,0,0);
+    background-color:black;
+    border: 2px solid orangered;
+    border-radius: 12px;
 }
+
 body{
-    background-image:pexels-aleksandr-neplokhov-2289137.jpg;
+    background-color: rgba(0,0,0,.95);
+}
+
+#rules{
+    color:white;
+    font-family:monospace;
+    font-size:25px;
+    text-align: justify;
+    padding: 5% 5% 5% 5%;
 }
 
 #buttonsContainer {
@@ -33,7 +44,38 @@ button {
     display:none;
 }
 
-#Trick-List{
+
+#logContainer p {
+    color:white;
+    margin-left:25%;
+    margin-right:25%;
+    padding: 15px 32px;
+    background-color: black;
+    font-family:monospace;
+    font-size:20px;
+    text-align: center;
+    border:2px solid orangered;
+    border-radius: 12px;
+    display:flex;
+    display:column-reverse;
+  }
+
+ 
+
+#floatLeft{
+    float:left;
+}
+
+#floatRight{
+    float:right;
+}
+
+#centerLog{
+    margin-top: 100px;
+}
+
+
+.belowButtons p{
     color:white;
     padding: 15px 32px;
     background-color: black;
@@ -44,8 +86,20 @@ button {
     border-radius: 12px;
 }
 
-
-.belowButtons {
+.belowButtons{
     display:flex;
     justify-content: center;
+}
+
+
+#Trick-List{
+    color:white;
+    padding: 15px 32px;
+    background-color: black;
+    font-family:monospace;
+    font-size:20px;
+    text-align: center;
+    border:2px solid orangered;
+    border-radius: 12px;
+    margin:5px;
 }
