@@ -9,6 +9,7 @@ header {
     border-radius: 12px;
 }
 
+
 body{
     background-color: rgba(0,0,0,.95);
 }
@@ -47,9 +48,9 @@ button {
 
 #logContainer p {
     color:white;
-    margin-left:25%;
-    margin-right:25%;
-    padding: 15px 32px;
+    margin-left:5%;
+    margin-right:5%;
+    padding: 15px 15px;
     background-color: black;
     font-family:monospace;
     font-size:20px;
@@ -72,8 +73,17 @@ button {
 
 #centerLog{
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
 }
 
+.scroll-container{
+    width: 600px; /* Set the width of your container */
+    height: 300px; /* Set the height of your container */
+    overflow-y: auto; /* Use "auto" to show a vertical scroll bar only when needed */
+    border: 1px solid orangered; /* Optional: Add a border for better visibility */
+    border-radius: 12px;
+}
 
 .belowButtons p{
     color:white;

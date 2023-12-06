@@ -1,16 +1,54 @@
-A README.mdfile with explanations of the technologies used, the approach taken, a link to your live site, installation instructions, unsolved problems, etc. Here is a great guide on how to write a readme
-#Project Title: Skater Showdown
-## Motivation
-### Build Status
-#### Code Style
-##### Screenshots
-###### Tech/framework used (Built with VS Code)
-####### Features
-######## Code Example
-######### Installation
-########## API Reference (API reference docs live)
-########### Tests 
-############ How to use?
-############# Contribute 
-############## Credits
-############### License 
+
+## Project Title: Skater Showdown
+
+## Getting Started: 
+
+Skater Showdown is an interactive web-based game where players can control a skater and perform tricks, competing against an opponent. The goal is to execute tricks successfully while avoiding wipeouts and accumulating the least number of letters in the word "SKATER."
+
+## Link to Live Site:  http://127.0.0.1:5502/
+
+## Gameplay
+
+- Choose a character (Tony Hawk or Estro Jen) at the beginning of the game.
+- Click the "New Trick" button to reveal a random set of tricks.
+- Press the corresponding keys to execute the tricks before your opponent does.
+- Avoid wipeouts to prevent accumulating letters in the word "SKATER."
+- The game continues until one player spells out the entire word "SKATER" and loses.
+
+## Controls
+
+- **Player 1 (Tony Hawk):** Use the provided buttons to control the game.
+- **Player 2 (Opponent):** Use the provided buttons to control the game.
+
+## Build Status:
+ Here are a few issues with the code that still needs to be worked on:
+
+- After pressing the keys to complete a trick, the code will sometimes skip over certain if statements. 
+- The Trick-List does not populate upon choosing a character.
+- Extra characters with varying property values has not be configured or added to the game. 
+- Additional Animation or Character Pics
+- Having the logs populate on the top and not the bottom.
+- Make the trick unavailable if you just hold. 
+- Adding title above trick-list.
+- 
+
+## Tech/framework Buit using: VS Code
+
+## Contribute:
+
+If you'd like to contribute to Skater Showdown, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make changes and test thoroughly.
+4. Submit a pull request.
+
+## Acknowledgments
+
+- Inspired by the world of skateboarding and extreme sports.
+- Built with HTML, CSS, and JavaScript.
+- Special thanks to [OpenAI](https://www.openai.com/) for providing the language model.- Special thanks to Arthur Bernier for providing a randomization code I copied.
+
+Enjoy the game and happy skating!
+
+## License: MIT
